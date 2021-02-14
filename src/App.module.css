@@ -1,0 +1,16 @@
+.barrier {
+
+}
+
+.barrier input {
+  width: 50px;
+}
+
+.barrier * {
+  margin-right: 10px;
+  margin-bottom: 10px;
+}
+
+.total {
+  margin: 10px;
+}
