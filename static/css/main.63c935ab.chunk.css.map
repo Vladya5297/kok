@@ -1,0 +1,1 @@
+{"version":3,"sources":["webpack://src/App.module.css"],"names":[],"mappings":"AAIA,0BACE,UACF,CAEA,sBACE,iBAAkB,CAClB,kBACF,CAEA,kBACE,WACF","file":"main.63c935ab.chunk.css","sourcesContent":[".barrier {\r\n\r\n}\r\n\r\n.barrier input {\r\n  width: 50px;\r\n}\r\n\r\n.barrier * {\r\n  margin-right: 10px;\r\n  margin-bottom: 10px;\r\n}\r\n\r\n.total {\r\n  margin: 10px;\r\n}"]}
