@@ -1,5 +1,7 @@
-.barrier {
+.barrier {}
 
+input[type=checkbox] {
+  margin-left: -15px;
 }
 
 .barrier input {
@@ -8,7 +10,7 @@
 
 .barrier * {
   margin-right: 10px;
-  margin-bottom: 10px;
+  margin-bottom: 15px;
 }
 
 .total {
