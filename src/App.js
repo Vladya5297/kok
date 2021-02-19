@@ -89,6 +89,15 @@ const App = () => {
 
   return (
     <div>
+      <h1>Комплекс оценки защищённости</h1>
+      <p>Разработчики:</p>
+      <ul>
+        <li>Овчинникова М. А.</li>
+        <li>Ларюшина И. А.</li>
+        <li>Комиссарова Е. Г.</li>
+        <li>Кувшинов В. Л.</li>
+      </ul>
+      <hr />
       <span className={classes.barrier}>
         <span>Использовать H</span>
         <input
