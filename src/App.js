@@ -1,9 +1,10 @@
 import React, { useState, useEffect } from 'react'
 import classes from './App.module.css'
 
-const Barrier = ({ number, remove, P, setP, withH, H, checked, setChecked }) => {
+const Barrier = ({ number, remove, P, setP, withH, H, checked, setChecked, barriers }) => {
   const [um, setUm] = useState(0)
   const [fm, setFm] = useState(0)
+  const [rangeP, setRangeP] = useState(0)
 
   useEffect(() => {
     if (um === 0 || fm === 0 || (withH && H === 0)) {
@@ -15,6 +16,13 @@ const Barrier = ({ number, remove, P, setP, withH, H, checked, setChecked }) => 
       setP(result)
     }
   }, [H, withH, um, fm])
+
+  useEffect(() => {
+    const rangeP = barriers.slice(0, number).reduce((accumulator, barrier) => {
+      return accumulator + barrier.P
+    }, 0)
+    setRangeP(rangeP)
+  })
 
   return (
     <div className={classes.barrier}>
@@ -45,9 +53,31 @@ const Barrier = ({ number, remove, P, setP, withH, H, checked, setChecked }) => 
           const value = parseFloat(target.value)
           setFm(value)
         }}/>
-      <span>{`Pнсд = ${P || 'Деление на ноль'}`}</span>
-      <span>{`Pзащ = ${1 - P || 'Деление на ноль'}`}</span>
-      {number !== 1 && <button onClick={remove}>Удалить</button>}
+      <span>
+        {'Pнсд'}
+        <span className={classes.index}>
+          {number}
+        </span>
+        {` = ${P ? +P.toFixed(3) : 'Деление на ноль'}`}
+      </span>
+      <span>
+        {'Pзащ'}
+        <span className={classes.index}>
+          {number}
+        </span>
+        {` = ${P ? +(1 - P).toFixed(3) : 'Деление на ноль'}`}
+      </span>
+      {number !== 1 && (
+      <>
+        <span>
+          {'Pзащ'}
+          <span className={classes.index}>
+            1-{number}
+          </span>
+          {` = ${rangeP ? +rangeP.toFixed(3) : 'Деление на ноль'}`}
+        </span>
+        <button onClick={remove}>Удалить</button>
+      </>)}
     </div>
   )
 }
@@ -126,6 +156,7 @@ const App = () => {
           P={P}
           withH={withH}
           H={H}
+          barriers={barriers}
         />
       ))}
       <input
@@ -135,7 +166,13 @@ const App = () => {
           setBarriers([...barriers, { id: barriers.length + 1, checked: true }])
         }}
       />
-      <div className={classes.total}>{`Pзащ = ${total || 'Невозможно вычислить'}`}</div>
+      <div className={classes.total}>
+        {'Pзащ'}
+        <span className={classes.index}>
+          {'∑'}
+        </span>
+        {` = ${total}`}
+      </div>
     </div>
   )
 }

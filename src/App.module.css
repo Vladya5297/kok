@@ -13,11 +13,15 @@ input[type=checkbox] {
   width: 50px;
 }
 
-.barrier * {
+.barrier > * {
   margin-right: 10px;
   margin-bottom: 15px;
 }
 
 .total {
   margin: 10px;
+}
+
+.index {
+  font-size: x-small;
 }
