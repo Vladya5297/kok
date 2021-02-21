@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.css": "/kok/static/css/main.9e013806.chunk.css",
-    "main.js": "/kok/static/js/main.3da00fa7.chunk.js",
-    "main.js.map": "/kok/static/js/main.3da00fa7.chunk.js.map",
+    "main.css": "/kok/static/css/main.c8193bb7.chunk.css",
+    "main.js": "/kok/static/js/main.72197814.chunk.js",
+    "main.js.map": "/kok/static/js/main.72197814.chunk.js.map",
     "runtime-main.js": "/kok/static/js/runtime-main.c6dafde8.js",
     "runtime-main.js.map": "/kok/static/js/runtime-main.c6dafde8.js.map",
     "static/js/2.e126f7d2.chunk.js": "/kok/static/js/2.e126f7d2.chunk.js",
@@ -10,13 +10,13 @@
     "static/js/3.0473addc.chunk.js": "/kok/static/js/3.0473addc.chunk.js",
     "static/js/3.0473addc.chunk.js.map": "/kok/static/js/3.0473addc.chunk.js.map",
     "index.html": "/kok/index.html",
-    "static/css/main.9e013806.chunk.css.map": "/kok/static/css/main.9e013806.chunk.css.map",
+    "static/css/main.c8193bb7.chunk.css.map": "/kok/static/css/main.c8193bb7.chunk.css.map",
     "static/js/2.e126f7d2.chunk.js.LICENSE.txt": "/kok/static/js/2.e126f7d2.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.c6dafde8.js",
     "static/js/2.e126f7d2.chunk.js",
-    "static/css/main.9e013806.chunk.css",
-    "static/js/main.3da00fa7.chunk.js"
+    "static/css/main.c8193bb7.chunk.css",
+    "static/js/main.72197814.chunk.js"
   ]
 }
