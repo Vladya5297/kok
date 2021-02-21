@@ -24,4 +24,6 @@ input[type=checkbox] {
 
 .index {
   font-size: x-small;
+  position: relative;
+  bottom: -3px;
 }

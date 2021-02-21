@@ -19,9 +19,9 @@ const Barrier = ({ number, remove, P, setP, withH, H, checked, setChecked, barri
 
   useEffect(() => {
     const rangeP = barriers.slice(0, number).reduce((accumulator, barrier) => {
-      return accumulator + barrier.P
-    }, 0)
-    setRangeP(rangeP)
+      return accumulator * barrier.P
+    }, 1)
+    setRangeP(1 - rangeP)
   })
 
   return (
@@ -171,7 +171,7 @@ const App = () => {
         <span className={classes.index}>
           {'∑'}
         </span>
-        {` = ${total}`}
+        {` = ${total || 'Невозможно вычислить'}`}
       </div>
     </div>
   )
